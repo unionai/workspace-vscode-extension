@@ -76,7 +76,7 @@
           {
             "id": "flyte-demo.executeWorkflowLocally",
             "title": "Executing your Flyte Workflows",
-            "description": "Run your workflow using pyflyte, the CLI that ships with flytekit.\n[Run locally in terminal](command:flyte-demo.openTerminalAndExecute?%7B%22command%22%3A%20%22pyflyte%20run%20flyte_demo%2Fworkflows%2Fflyte_workflow.py%20training_workflow%22%7D)\n[Run remotely in terminal](command:flyte-demo.openTerminalAndExecute?%7B%22command%22%3A%20%22pyflyte%20run%20--remote%20flyte_demo%2Fworkflows%2Fflyte_workflow.py%20training_workflow%22%7D)\n",
+            "description": "Run your workflow using pyflyte, the CLI that ships with flytekit.\n[Run locally in terminal](command:flyte-demo.openTerminalAndExecute?%7B%22command%22%3A%20%22pyflyte%20run%20workflows%2Fflyte_workflow.py%20training_workflow%22%7D)\n[Run remotely in terminal](command:flyte-demo.openTerminalAndExecute?%7B%22command%22%3A%20%22pyflyte%20run%20--remote%20workflows%2Fflyte_workflow.py%20training_workflow%22%7D)\n",
             "media": {
               "markdown": "./markdown/step03.md"
             },

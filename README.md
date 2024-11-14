@@ -7,12 +7,6 @@ Union Workspaces.
 
 ### Debugging extension:
 
-Open the extension at root level in vscode:
-
-```
-cd flyte-demo
-```
-
 Run the extension by pressing `F5` or by going to the debug side menu.
 From here you can put breakpoints wherever you want:
 
@@ -21,12 +15,14 @@ From here you can put breakpoints wherever you want:
 ### Generating binaries:
 
 Install vsce (one time):
-```
+
+```bash
 npm install -g vsce
 ```
 
 Generate vsix binary:
-```
+
+```bash
 vsce package --no-yarn
 ```
 
