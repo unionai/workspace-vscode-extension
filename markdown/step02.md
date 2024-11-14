@@ -5,7 +5,7 @@ Flyte workflow. Simply decorate the three functions with the `@task`
 decorator and the main `training_workflow` entrypoint with the `@workflow`
 decorator, and you're set!
 
-[📂 Open Python Workflow](command:flyte-demo.openFlyteWorkflow)
+[📂 Open Python Workflow](command:union-workspace.openFlyteWorkflow)
 
 **Tasks** are the fundamental units of compute in Flyte. You can think of them
 as pure, containerized functions that understand the input and output types

@@ -33,7 +33,7 @@ Use this sandbox environment to try creating your own workflows based on what yo
 Make sure **not to use any sensitive data 📊**  or **proprietary code 💻** in this environment,
 and have fun!
 
-[✨ Create New Workflow](command:flyte-demo.createNewWorkflow)
+[✨ Create New Workflow](command:union-workspace.createNewWorkflow)
 
 ## What if I have questions?
 

@@ -10,15 +10,15 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/unionai/vscode-extensions.git",
-    "directory": "union-workspace"
+    "url": "https://github.com/unionai/workspace-vscode-extension.git",
+    "directory": "."
   },
   "categories": [
     "Other",
     "Machine Learning"
   ],
   "galleryBanner": {
-    "color": "#8647ae",
+    "color": "#FDB51D",
     "theme": "dark"
   },
   "capabilities": {
@@ -29,117 +29,117 @@
   "main": "./dist/extension.js",
   "activationEvents": [
     "onStartupFinished",
-    "onCommand:flyte-demo.start",
-    "onCommand:flyte-demo.createNewWorkflow",
-    "onCommand:flyte-demo.openTerminalAndExecute",
-    "onCommand:flyte-demo.executeCluster",
-    "onCommand:flyte-demo.inspectResults",
-    "onCommand:flyte-demo.executeWorkflowLocally",
-    "onCommand:flyte-demo.executeWorkflowRemote"
+    "onCommand:union-workspace.start",
+    "onCommand:union-workspace.createNewWorkflow",
+    "onCommand:union-workspace.openTerminalAndExecute",
+    "onCommand:union-workspace.executeCluster",
+    "onCommand:union-workspace.inspectResults",
+    "onCommand:union-workspace.executeWorkflowLocally",
+    "onCommand:union-workspace.executeWorkflowRemote"
   ],
   "extensionKind": [
     "workspace"
   ],
-  "icon": "media/logo.webp",
+  "icon": "media/union-logo.webp",
   "contributes": {
     "walkthroughs": [
       {
-        "id": "flyte-demo",
-        "title": "Getting Started with Flyte",
-        "description": "This quick start gives an overview of how to get up and running with Flyte",
+        "id": "union-workspace",
+        "title": "Getting Started with Union",
+        "description": "This quick start gives an overview of how to get up and running with Union",
         "steps": [
           {
-            "id": "flyte-demo.start",
+            "id": "union-workspace.start",
             "title": "Create a Model Training Workflow in Python",
-            "description": "In this first example, we're going to create a simple model training workflow in plain Python.\n[Open Python workflow](command:flyte-demo.openPyWorkflow)\n",
+            "description": "In this first example, we're going to create a simple model training workflow in plain Python.\n[Open Python workflow](command:union-workspace.openPyWorkflow)\n",
             "media": {
               "markdown": "./markdown/step01.md"
             },
             "completionEvents": [
-              "onCommand:flyte-demo.openPyWorkflow",
+              "onCommand:union-workspace.openPyWorkflow",
               "onCommand:workbench.action.files.openFolder",
               "onCommand:workbench.action.files.openFileFolder"
             ]
           },
           {
-            "id": "flyte-demo.convertToFlyte",
-            "title": "Convert to a Flyte Workflow",
-            "description": "Let's see how easy it is to port our plain Python workflow to a Flyte workflow.\n[Open Flyte workflow](command:flyte-demo.openFlyteWorkflow)\n",
+            "id": "union-workspace.convertToFlyte",
+            "title": "Convert to a Union Workflow",
+            "description": "Let's see how easy it is to port our plain Python workflow to a Union workflow.\n[Open Union workflow](command:union-workspace.openFlyteWorkflow)\n",
             "media": {
               "markdown": "./markdown/step02.md"
             },
             "completionEvents": [
-              "onCommand:flyte-demo.convertToFlyte",
-              "onCommand:flyte-demo.openFlyteWorkflow"
+              "onCommand:union-workspace.convertToFlyte",
+              "onCommand:union-workspace.openFlyteWorkflow"
             ]
           },
           {
-            "id": "flyte-demo.executeWorkflowLocally",
-            "title": "Executing your Flyte Workflows",
-            "description": "Run your workflow using pyflyte, the CLI that ships with flytekit.\n[Run locally in terminal](command:flyte-demo.openTerminalAndExecute?%7B%22command%22%3A%20%22pyflyte%20run%20workflows%2Fflyte_workflow.py%20training_workflow%22%7D)\n[Run remotely in terminal](command:flyte-demo.openTerminalAndExecute?%7B%22command%22%3A%20%22pyflyte%20run%20--remote%20workflows%2Fflyte_workflow.py%20training_workflow%22%7D)\n",
+            "id": "union-workspace.executeWorkflowLocally",
+            "title": "Executing your Union Workflows",
+            "description": "Run your workflow using `union`, the CLI that ships with `union`.\n[Run locally in terminal](command:union-workspace.openTerminalAndExecute?%7B%22command%22%3A%20%22union%20run%20workflows%2Fflyte_workflow.py%20training_workflow%22%7D)\n[Run remotely in terminal](command:union-workspace.openTerminalAndExecute?%7B%22command%22%3A%20%22union%20run%20--remote%20workflows%2Fflyte_workflow.py%20training_workflow%22%7D)\n",
             "media": {
               "markdown": "./markdown/step03.md"
             },
             "completionEvents": [
-              "onCommand:flyte-demo.executeWorkflowLocally",
+              "onCommand:union-workspace.executeWorkflowLocally",
               "onStepSelected"
             ]
           },
           {
-            "id": "flyte-demo.inspectResults",
-            "title": "Inspect the Results on Flyte console",
-            "description": "Navigate to the URL produced as the result of running pyflyte run.",
+            "id": "union-workspace.inspectResults",
+            "title": "Inspect the Results on Union UI",
+            "description": "Navigate to the URL produced as the result of running `union run`.",
             "media": {
               "markdown": "./markdown/step04.md"
             },
             "completionEvents": [
-              "onCommand:flyte-demo.inspectResults",
+              "onCommand:union-workspace.inspectResults",
               "onStepSelected"
             ]
           },
           {
-            "id": "flyte-demo.jupyter",
-            "title": "Interacting programmatically with Flyte",
-            "description": "Open the Jupyter Notebook provided in the demo:\n[Open Jupyter Notebook](command:flyte-demo.openJupyter)\n",
+            "id": "union-workspace.jupyter",
+            "title": "Interacting programmatically with Union",
+            "description": "Open the Jupyter Notebook provided in the demo:\n[Open Jupyter Notebook](command:union-workspace.openJupyter)\n",
             "media": {
               "markdown": "./markdown/step05.md"
             },
             "completionEvents": [
-              "onCommand:flyte-demo.jupyter",
-              "onCommand:flyte-demo.openJupyter"
+              "onCommand:union-workspace.jupyter",
+              "onCommand:union-workspace.openJupyter"
             ]
           },
           {
-            "id": "flyte-demo.iterating",
+            "id": "union-workspace.iterating",
             "title": "Iterating on your Workflows",
-            "description": "Iterate on the workflow to make it more flexible:\n[Open Python workflow](command:flyte-demo.iterating)\n",
+            "description": "Iterate on the workflow to make it more flexible:\n[Open Python workflow](command:union-workspace.iterating)\n",
             "media": {
               "markdown": "./markdown/step06.md"
             },
             "completionEvents": [
-              "onCommand:flyte-demo.iterating"
+              "onCommand:union-workspace.iterating"
             ]
           },
           {
-            "id": "flyte-demo.parallelizing",
+            "id": "union-workspace.parallelizing",
             "title": "Parallelizing your Workflows",
-            "description": "Parallelize your model training workflow to do gridsearch hyperparameter tuning:\n[Open Python workflow](command:flyte-demo.parallelizing)\n",
+            "description": "Parallelize your model training workflow to do gridsearch hyperparameter tuning:\n[Open Python workflow](command:union-workspace.parallelizing)\n",
             "media": {
               "markdown": "./markdown/step07.md"
             },
             "completionEvents": [
-              "onCommand:flyte-demo.parallelizing"
+              "onCommand:union-workspace.parallelizing"
             ]
           },
           {
-            "id": "flyte-demo.whatsNext",
+            "id": "union-workspace.whatsNext",
             "title": "What's next",
             "description": "Explore more resources to help you get started with Flyte",
             "media": {
               "markdown": "./markdown/whats_next.md"
             },
             "completionEvents": [
-              "onCommand:flyte-demo.whatsNext",
+              "onCommand:union-workspace.whatsNext",
               "onStepSelected"
             ]
           }
@@ -148,18 +148,18 @@
     ],
     "commands": [
       {
-        "title": "New Flyte Workflow",
+        "title": "New Union Workflow",
         "category": "Create",
         "enablement": "true",
         "shortTitle": "Create a new workflow",
-        "command": "flyte-demo.newUntitled"
+        "command": "union-workspace.newUntitled"
       },
       {
-        "title": "New Flyte Jupyter Notebook",
+        "title": "New Union Jupyter Notebook",
         "category": "Create",
         "enablement": "true",
         "shortTitle": "Create a new Jupyter Notebook",
-        "command": "flyte-demo.openJupyter"
+        "command": "union-workspace.openJupyter"
       }
     ]
   },
@@ -167,9 +167,9 @@
     "vscode:prepublish": "yarn run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "preflyte-demo": "yarn run compile && yarn run lint",
+    "preunion-workspace": "yarn run compile && yarn run lint",
     "lint": "eslint src --ext ts",
-    "flyte-demo": "node ./dist/flyte-demo/runflyte-demo.js"
+    "union-workspace": "node ./dist/union-workspace/rununion-workspace.js"
   },
   "devDependencies": {
     "@types/glob": "^8.0.0",

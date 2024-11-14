@@ -3,17 +3,17 @@ import { OpenPythonWorkflow, OpenJupyterNotebook, openTerminal as OpenTerminal, 
 import { disposeStatusBar, startTimer } from './timer';
 
 export const enum Commands {
-  "Start" = 'flyte-demo.start',
-  "OpenPyWorkflow" = 'flyte-demo.openPyWorkflow',
-  "OpenFlyteWorkflow" = 'flyte-demo.openFlyteWorkflow',
-  "NewJupyter" = 'flyte-demo.openJupyter',
-  "OpenTerminal" = 'flyte-demo.openTerminalAndExecute',
-  "ExecuteLocally" = 'flyte-demo.executeWorkflowLocally',
-  "ExecuteRemote" = 'flyte-demo.executeWorkflowRemote',
-  "InspectResults" = 'flyte-demo.inspectResults',
-  "Parallelize" = 'flyte-demo.parallelizing',
-  "Iterate" = 'flyte-demo.iterating',
-  "CreateNewWorkflow" = 'flyte-demo.createNewWorkflow'
+  "Start" = 'union-workspace.start',
+  "OpenPyWorkflow" = 'union-workspace.openPyWorkflow',
+  "OpenFlyteWorkflow" = 'union-workspace.openFlyteWorkflow',
+  "NewJupyter" = 'union-workspace.openJupyter',
+  "OpenTerminal" = 'union-workspace.openTerminalAndExecute',
+  "ExecuteLocally" = 'union-workspace.executeWorkflowLocally',
+  "ExecuteRemote" = 'union-workspace.executeWorkflowRemote',
+  "InspectResults" = 'union-workspace.inspectResults',
+  "Parallelize" = 'union-workspace.parallelizing',
+  "Iterate" = 'union-workspace.iterating',
+  "CreateNewWorkflow" = 'union-workspace.createNewWorkflow'
 }
 
 export function activate(context: vscode.ExtensionContext) {

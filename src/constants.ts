@@ -1,6 +1,3 @@
-export const runFlyteLocallyCommand = `pyflyte run my_workflow.py wf --n 500 --mean 42 --sigma 2`;
-export const runFlyteRemoteCommand = `pyflyte run --remote my_workflow.py wf --n 500 --mean 42 --sigma 2`;
-
 export const trustedDomainsContents = `
 [
   "*.union.ai",
@@ -44,14 +41,3 @@ def wf() -> FlytePickle:
     data = process_data(data=get_data())
     return train_model(data=data)
 `;
-
-export const jupyterNodebookData = `from flytekit.remote.remote import FlyteRemote
-from flytekit.configuration import Config
-rr = FlyteRemote(
-    Config.auto(config_file="<config_file_path>"),
-    default_project="flytesnacks",
-    default_domain="development",
-)
-we = rr.fetch_execution(name="<execution_name>")
-rr.sync_execution(we, sync_nodes=True)
-`

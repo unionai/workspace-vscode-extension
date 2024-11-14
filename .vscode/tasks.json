@@ -30,13 +30,13 @@
     //     "panel": "dedicated"
     //   },
     //   "options": {
-    //     "cwd": "${workspaceFolder}/flyte-demo",
+    //     "cwd": "${workspaceFolder}/union-workspace",
     //     // "env": {
     //     //   "NODE_ENV": "development",
-    //     //   "EXT_NAME": "${workspaceFolder}/flyte-demo"
+    //     //   "EXT_NAME": "${workspaceFolder}/union-workspace"
     //     // },
     //     // "args":[
-    //     //   "--extensionDevelopmentPath=${workspaceFolder}/flyte-demo",
+    //     //   "--extensionDevelopmentPath=${workspaceFolder}/union-workspace",
     //     // ],
     //     // "shell": {
     //     //   "args": [
@@ -61,7 +61,7 @@
     //     "$eslint-stylish"
     //   ],
     //   "options": {
-    //     "cwd": "${workspaceFolder}/flyte-demo",
+    //     "cwd": "${workspaceFolder}/union-workspace",
     //   },
     //   "presentation": {
     //     "group": "dev-group",

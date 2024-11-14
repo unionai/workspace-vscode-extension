@@ -36,8 +36,8 @@ export const initFlyteWalkthrough = async () => {
 
   try {
     // Automatically open walkthrough on the first step
-    vscode.commands.executeCommand('workbench.action.openWalkthrough', { "category": "unionai.flyte-demo#flyte-demo", "step": "unionai.flyte-demo#flyte-demo.start" });
-    // await vscode.commands.executeCommand("walkthroughs.selectStep", `${"flyte-demo.convertToFlyte"}`)
+    vscode.commands.executeCommand('workbench.action.openWalkthrough', { "category": "unionai.union-workspace#union-workspace", "step": "unionai.union-workspace#union-workspace.start" });
+    // await vscode.commands.executeCommand("walkthroughs.selectStep", `${"union-workspace.convertToFlyte"}`)
   } catch (error) {
     console.log(error);
   }
@@ -97,12 +97,12 @@ export interface OpenTerminalProps {
 
 export function noop() { }
 export const openExternalurl = async () => {
-  vscode.window.showInformationMessage("Flyte trial expired. You will be redirected back to the homepage.")
+  vscode.window.showInformationMessage("Union trial expired. You will be redirected back to the homepage.")
   return vscode.env.openExternal(vscode.Uri.parse('https://sandbox.union.ai/launch?expired=true')).then(noop, noop);
 }
 
 export const openTerminal = async (props: OpenTerminalProps) => {
-  const name = "Flyte";
+  const name = "Union";
   let terminal: vscode.Terminal | undefined = vscode.window.terminals.find((value) => value.name === name);
   if (!terminal) {
     const dirPath = getCurrentWorkingDirectory();

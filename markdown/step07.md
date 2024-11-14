@@ -2,7 +2,7 @@
 
 Flyte also provides built-in constructs for parallelizing your tasks.
 
-[📂 Open Python workflow](command:flyte-demo.parallelizing)
+[📂 Open Python workflow](command:union-workspace.parallelizing)
 
 In this example, we're extending our training workflow to implement a simple
 gridsearch workflow leveraging the [`map_task`](https://docs.flyte.org/projects/cookbook/en/latest/auto/core/control_flow/map_task.html#) construct.
@@ -28,4 +28,4 @@ You can now run your gridsearch experiment with `pyflyte run`:
 ```
 pyflyte run --remote workflows/parallelism.py training_workflow --hp_grid '[{"C": 0.1}, {"C": 0.01}, {"C": 0.001}]'
 ```
-[▶️ Run remotely in terminal](command:flyte-demo.openTerminalAndExecute?%7B%22command%22%3A%22pyflyte%20run%20--remote%20workflows%2Fparallelism.py%20training_workflow%20--hp_grid%20%27%5B%7B%5C%22C%5C%22%3A%200.1%7D%2C%20%7B%5C%22C%5C%22%3A%200.01%7D%2C%20%7B%5C%22C%5C%22%3A%200.001%7D%5D%27%22%7D)
+[▶️ Run remotely in terminal](command:union-workspace.openTerminalAndExecute?%7B%22command%22%3A%22pyflyte%20run%20--remote%20workflows%2Fparallelism.py%20training_workflow%20--hp_grid%20%27%5B%7B%5C%22C%5C%22%3A%200.1%7D%2C%20%7B%5C%22C%5C%22%3A%200.01%7D%2C%20%7B%5C%22C%5C%22%3A%200.001%7D%5D%27%22%7D)

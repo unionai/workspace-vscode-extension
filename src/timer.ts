@@ -8,8 +8,8 @@ export const startTimer = () => {
   const envTimestamp = process.env.SANDBOX_EXPIRED_TIMESTAMP;
   const endTime = envTimestamp ? new Date(+envTimestamp) : addMinutes(4 * 60 + 15);
   if (!statusBar) {
-    statusBar = vscode.window.createStatusBarItem("flyte", vscode.StatusBarAlignment.Right, 0);
-    statusBar.name = "flyte";
+    statusBar = vscode.window.createStatusBarItem("union", vscode.StatusBarAlignment.Right, 0);
+    statusBar.name = "union";
     statusBar.show();
   }
 
