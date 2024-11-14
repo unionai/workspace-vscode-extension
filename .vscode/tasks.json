@@ -1,0 +1,91 @@
+// See https://go.microsoft.com/fwlink/?LinkId=733558
+// for the documentation about the tasks.json format
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "watch",
+      "problemMatcher": "$tsc-watch",
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+    // {
+    //   "label": "Watch extension",
+    //   "type": "npm",
+    //   "script": "watch",
+    //   "problemMatcher": "$tsc-watch",
+    //   "detail": "Watch extension changes",
+    //   "isBackground": true,
+    //   "presentation": {
+    //     "revealProblems": "always",
+    //     "group": "dev-group",
+    //     "focus": true,
+    //     "panel": "dedicated"
+    //   },
+    //   "options": {
+    //     "cwd": "${workspaceFolder}/flyte-demo",
+    //     // "env": {
+    //     //   "NODE_ENV": "development",
+    //     //   "EXT_NAME": "${workspaceFolder}/flyte-demo"
+    //     // },
+    //     // "args":[
+    //     //   "--extensionDevelopmentPath=${workspaceFolder}/flyte-demo",
+    //     // ],
+    //     // "shell": {
+    //     //   "args": [
+    //     //     "-c",
+    //     //     "-l"
+    //     //   ]
+    //     // }
+    //   },
+    //   "group": {
+    //     "kind": "build",
+    //     "isDefault": true,
+    //   },
+    // "dependsOn": [
+    //   "Lint extension",
+    // ],
+    // },
+    // {
+    //   "label": "Lint extension",
+    //   "type": "npm",
+    //   "script": "lint",
+    //   "problemMatcher": [
+    //     "$eslint-stylish"
+    //   ],
+    //   "options": {
+    //     "cwd": "${workspaceFolder}/flyte-demo",
+    //   },
+    //   "presentation": {
+    //     "group": "dev-group",
+    //     "focus": false,
+    //     "panel": "dedicated"
+    //   }
+    // },
+    // {
+    //   "label": "Echo",
+    //   "type": "shell",
+    //   "command": "echo",
+    //   "isBackground": true,
+    //   "args": [
+    //     "env: ${env:NODE_ENV}\n",
+    //     "execPath: ${execPath}\n",
+    //     "workspaceFolder = ${workspaceFolder}\n",
+    //     "file=${file} \n",
+    //     "fileWorkspaceFolder=${fileWorkspaceFolder}\n"
+    //   ],
+    //   "presentation": {
+    //     "group": "dev-group",
+    //     "focus": false,
+    //     "panel": "dedicated"
+    //   }
+    // },
+  ]
+}

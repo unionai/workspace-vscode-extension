@@ -1,0 +1,190 @@
+{
+  "name": "union-workspace-onboarding",
+  "displayName": "Union Workspace Onboarding",
+  "description": "Visual Studio Code onboarding experience for Union Workspaces",
+  "version": "0.0.1",
+  "publisher": "unionai",
+  "engines": {
+    "vscode": "^1.71.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unionai/vscode-extensions.git",
+    "directory": "union-workspace-onboarding"
+  },
+  "categories": [
+    "Other",
+    "Machine Learning"
+  ],
+  "galleryBanner": {
+    "color": "#8647ae",
+    "theme": "dark"
+  },
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    }
+  },
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand:flyte-demo.start",
+    "onCommand:flyte-demo.createNewWorkflow",
+    "onCommand:flyte-demo.openTerminalAndExecute",
+    "onCommand:flyte-demo.executeCluster",
+    "onCommand:flyte-demo.inspectResults",
+    "onCommand:flyte-demo.executeWorkflowLocally",
+    "onCommand:flyte-demo.executeWorkflowRemote"
+  ],
+  "extensionKind": [
+    "workspace"
+  ],
+  "icon": "media/logo.webp",
+  "contributes": {
+    "walkthroughs": [
+      {
+        "id": "flyte-demo",
+        "title": "Getting Started with Flyte",
+        "description": "This quick start gives an overview of how to get up and running with Flyte",
+        "steps": [
+          {
+            "id": "flyte-demo.start",
+            "title": "Create a Model Training Workflow in Python",
+            "description": "In this first example, we're going to create a simple model training workflow in plain Python.\n[Open Python workflow](command:flyte-demo.openPyWorkflow)\n",
+            "media": {
+              "markdown": "./markdown/step01.md"
+            },
+            "completionEvents": [
+              "onCommand:flyte-demo.openPyWorkflow",
+              "onCommand:workbench.action.files.openFolder",
+              "onCommand:workbench.action.files.openFileFolder"
+            ]
+          },
+          {
+            "id": "flyte-demo.convertToFlyte",
+            "title": "Convert to a Flyte Workflow",
+            "description": "Let's see how easy it is to port our plain Python workflow to a Flyte workflow.\n[Open Flyte workflow](command:flyte-demo.openFlyteWorkflow)\n",
+            "media": {
+              "markdown": "./markdown/step02.md"
+            },
+            "completionEvents": [
+              "onCommand:flyte-demo.convertToFlyte",
+              "onCommand:flyte-demo.openFlyteWorkflow"
+            ]
+          },
+          {
+            "id": "flyte-demo.executeWorkflowLocally",
+            "title": "Executing your Flyte Workflows",
+            "description": "Run your workflow using pyflyte, the CLI that ships with flytekit.\n[Run locally in terminal](command:flyte-demo.openTerminalAndExecute?%7B%22command%22%3A%20%22pyflyte%20run%20flyte_demo%2Fworkflows%2Fflyte_workflow.py%20training_workflow%22%7D)\n[Run remotely in terminal](command:flyte-demo.openTerminalAndExecute?%7B%22command%22%3A%20%22pyflyte%20run%20--remote%20flyte_demo%2Fworkflows%2Fflyte_workflow.py%20training_workflow%22%7D)\n",
+            "media": {
+              "markdown": "./markdown/step03.md"
+            },
+            "completionEvents": [
+              "onCommand:flyte-demo.executeWorkflowLocally",
+              "onStepSelected"
+            ]
+          },
+          {
+            "id": "flyte-demo.inspectResults",
+            "title": "Inspect the Results on Flyte console",
+            "description": "Navigate to the URL produced as the result of running pyflyte run.",
+            "media": {
+              "markdown": "./markdown/step04.md"
+            },
+            "completionEvents": [
+              "onCommand:flyte-demo.inspectResults",
+              "onStepSelected"
+            ]
+          },
+          {
+            "id": "flyte-demo.jupyter",
+            "title": "Interacting programmatically with Flyte",
+            "description": "Open the Jupyter Notebook provided in the demo:\n[Open Jupyter Notebook](command:flyte-demo.openJupyter)\n",
+            "media": {
+              "markdown": "./markdown/step05.md"
+            },
+            "completionEvents": [
+              "onCommand:flyte-demo.jupyter",
+              "onCommand:flyte-demo.openJupyter"
+            ]
+          },
+          {
+            "id": "flyte-demo.iterating",
+            "title": "Iterating on your Workflows",
+            "description": "Iterate on the workflow to make it more flexible:\n[Open Python workflow](command:flyte-demo.iterating)\n",
+            "media": {
+              "markdown": "./markdown/step06.md"
+            },
+            "completionEvents": [
+              "onCommand:flyte-demo.iterating"
+            ]
+          },
+          {
+            "id": "flyte-demo.parallelizing",
+            "title": "Parallelizing your Workflows",
+            "description": "Parallelize your model training workflow to do gridsearch hyperparameter tuning:\n[Open Python workflow](command:flyte-demo.parallelizing)\n",
+            "media": {
+              "markdown": "./markdown/step07.md"
+            },
+            "completionEvents": [
+              "onCommand:flyte-demo.parallelizing"
+            ]
+          },
+          {
+            "id": "flyte-demo.whatsNext",
+            "title": "What's next",
+            "description": "Explore more resources to help you get started with Flyte",
+            "media": {
+              "markdown": "./markdown/whats_next.md"
+            },
+            "completionEvents": [
+              "onCommand:flyte-demo.whatsNext",
+              "onStepSelected"
+            ]
+          }
+        ]
+      }
+    ],
+    "commands": [
+      {
+        "title": "New Flyte Workflow",
+        "category": "Create",
+        "enablement": "true",
+        "shortTitle": "Create a new workflow",
+        "command": "flyte-demo.newUntitled"
+      },
+      {
+        "title": "New Flyte Jupyter Notebook",
+        "category": "Create",
+        "enablement": "true",
+        "shortTitle": "Create a new Jupyter Notebook",
+        "command": "flyte-demo.openJupyter"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "preflyte-demo": "yarn run compile && yarn run lint",
+    "lint": "eslint src --ext ts",
+    "flyte-demo": "node ./dist/flyte-demo/runflyte-demo.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^18.6.1",
+    "@types/vscode": "^1.71.0",
+    "@typescript-eslint/eslint-plugin": "^5.40.0",
+    "@typescript-eslint/parser": "^5.38.1",
+    "@vscode/test-electron": "^2.1.5",
+    "eslint": "^8.24.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.0.0",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "vsce": "^2.15.0"
+  }
+}
