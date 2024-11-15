@@ -23,9 +23,9 @@ as follows:
    then wraps the `train_model` task in `map_task(train_model, concurrency=5)`, feeding
    the output of `prepare_training_args` the newly created map task.
 
-You can now run your gridsearch experiment with `pyflyte run`:
+You can now run your gridsearch experiment with `union run`:
 
 ```
-pyflyte run --remote workflows/parallelism.py training_workflow --hp_grid '[{"C": 0.1}, {"C": 0.01}, {"C": 0.001}]'
+union run --remote workflows/parallelism.py training_workflow --hp_grid '[{"C": 0.1}, {"C": 0.01}, {"C": 0.001}]'
 ```
-[▶️ Run remotely in terminal](command:union-workspace.openTerminalAndExecute?%7B%22command%22%3A%22pyflyte%20run%20--remote%20workflows%2Fparallelism.py%20training_workflow%20--hp_grid%20%27%5B%7B%5C%22C%5C%22%3A%200.1%7D%2C%20%7B%5C%22C%5C%22%3A%200.01%7D%2C%20%7B%5C%22C%5C%22%3A%200.001%7D%5D%27%22%7D)
+[▶️ Run remotely in terminal](command:union-workspace.openTerminalAndExecute?%7B%22command%22%3A%22union%20run%20--remote%20workflows%2Fparallelism.py%20training_workflow%20--hp_grid%20%27%5B%7B%5C%22C%5C%22%3A%200.1%7D%2C%20%7B%5C%22C%5C%22%3A%200.01%7D%2C%20%7B%5C%22C%5C%22%3A%200.001%7D%5D%27%22%7D)

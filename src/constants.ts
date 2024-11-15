@@ -12,7 +12,7 @@ export const createWfFileContents = `"""Create your own Flyte workflows 🔀
 Fill in the blank \`@task\` functions below, modify them, or
 create entirely new tasks/workflows!
 
-When you're ready, run it on the terminal using \`pyflyte run my_workflow.py wf\`
+When you're ready, run it on the terminal using \`union run my_workflow.py wf\`
 along with any additional arguments you need to pass into the workflow.
 """
 

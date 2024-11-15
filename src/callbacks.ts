@@ -67,7 +67,7 @@ export const OpenPythonWorkflowParallelize = async () => {
 }
 
 export const OpenFlyteWorkflow = async () => {
-  return await openFile("**/flyte_workflow.py");
+  return await openFile("**/union_workflow.py");
 }
 
 export const OpenJupyterNotebook = async () => {

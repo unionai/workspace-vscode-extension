@@ -3,9 +3,9 @@
 You can run the `training_workflow` locally with:
 
 ```
-pyflyte run workflows/flyte_workflow.py training_workflow
+union run workflows/union_workflow.py training_workflow
 ```
-[▶️ Run locally in terminal](command:union-workspace.openTerminalAndExecute?%7B%22command%22%3A%20%22pyflyte%20run%20workflows%2Fflyte_workflow.py%20training_workflow%22%7D)
+[▶️ Run locally in terminal](command:union-workspace.openTerminalAndExecute?%7B%22command%22%3A%20%22union%20run%20workflows%2Funion_workflow.py%20training_workflow%22%7D)
 
 Although this may not catch all the errors you may encounter in production,
 doing this helps during the development and debugging process.
@@ -14,9 +14,9 @@ Once you're happy with the state of your code, you can run your workflow
 on a Flyte cluster with the `--remote` flag:
 
 ```
-pyflyte run --remote workflows/flyte_workflow.py training_workflow
+union run --remote workflows/union_workflow.py training_workflow
 ```
-[▶️ Run remotely in terminal](command:union-workspace.openTerminalAndExecute?%7B%22command%22%3A%20%22pyflyte%20run%20--remote%20workflows%2Fflyte_workflow.py%20training_workflow%22%7D)
+[▶️ Run remotely in terminal](command:union-workspace.openTerminalAndExecute?%7B%22command%22%3A%20%22union%20run%20--remote%20workflows%2Funion_workflow.py%20training_workflow%22%7D)
 
 **Expected output:** You should see a URL to the workflow execution on your demo Flyte cluster:
 

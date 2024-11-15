@@ -33,6 +33,6 @@ with different settings.
 Once you're happy with the updates, simply rerun it with:
 
 ```
-pyflyte run --remote workflows/iterating.py training_workflow --hyperparameters '{"C": 0.1, "max_iter": 1000}'
+union run --remote workflows/iterating.py training_workflow --hyperparameters '{"C": 0.1, "max_iter": 1000}'
 ```
-[▶️ Run remotely in terminal](command:union-workspace.openTerminalAndExecute?%7B%22command%22%3A%22pyflyte%20run%20--remote%20workflows%2Fiterating.py%20training_workflow%20--hyperparameters%20%27%7B%5C%22C%5C%22%3A%200.1%2C%20%5C%22max_iter%5C%22%3A%201000%7D%27%22%7D)
+[▶️ Run remotely in terminal](command:union-workspace.openTerminalAndExecute?%7B%22command%22%3A%22union%20run%20--remote%20workflows%2Fiterating.py%20training_workflow%20--hyperparameters%20%27%7B%5C%22C%5C%22%3A%200.1%2C%20%5C%22max_iter%5C%22%3A%201000%7D%27%22%7D)

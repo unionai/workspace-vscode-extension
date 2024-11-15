@@ -76,7 +76,7 @@
           {
             "id": "union-workspace.executeWorkflowLocally",
             "title": "Executing your Union Workflows",
-            "description": "Run your workflow using `union`, the CLI that ships with `union`.\n[Run locally in terminal](command:union-workspace.openTerminalAndExecute?%7B%22command%22%3A%20%22union%20run%20workflows%2Fflyte_workflow.py%20training_workflow%22%7D)\n[Run remotely in terminal](command:union-workspace.openTerminalAndExecute?%7B%22command%22%3A%20%22union%20run%20--remote%20workflows%2Fflyte_workflow.py%20training_workflow%22%7D)\n",
+            "description": "Run your workflow using `union`, the CLI that ships with `union`.\n[Run locally in terminal](command:union-workspace.openTerminalAndExecute?%7B%22command%22%3A%20%22union%20run%20workflows%2Funion_workflow.py%20training_workflow%22%7D)\n[Run remotely in terminal](command:union-workspace.openTerminalAndExecute?%7B%22command%22%3A%20%22union%20run%20--remote%20workflows%2Funion_workflow.py%20training_workflow%22%7D)\n",
             "media": {
               "markdown": "./markdown/step03.md"
             },
@@ -134,7 +134,7 @@
           {
             "id": "union-workspace.whatsNext",
             "title": "What's next",
-            "description": "Explore more resources to help you get started with Flyte",
+            "description": "Explore more resources to help you get started with Union",
             "media": {
               "markdown": "./markdown/whats_next.md"
             },
