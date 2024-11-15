@@ -29,7 +29,7 @@ Install the extension on VSCode:
 - Press `cmd + shift + p` and selecting `Extensions: Install from VSIX...`
 - Select the `union-workspace-X.Y.Z.vsix` file. This should automatically activate the walkthrough.
 - Before running any commands, press `cmd + shift + p` and select `Python: Select Interpreter`.
-- Choose `+ Create Virtual Environment...` and select either `venv` or `conda`.
+- Choose `+ Create Virtual Environment...` and select either `venv` or `conda`. This new environment should be selected as the Python Interpreter.
 - Open the terminal and run `pip install -r requirements.txt`.
 - You should now be ready to run the commands in the walkthrough.
 
