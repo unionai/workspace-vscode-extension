@@ -19,7 +19,7 @@ the full power of Union!
 - **[📖 User Guide](https://docs.union.ai/serverless/user-guide)**:
   learn more about the features that make Union super powerful 💪, like the built-in [file and directory](https://docs.union.ai/serverless/user-guide/data-input-output/flyte-file-and-flyte-directory#flytefile-and-flytedirectory) types, [Decks](https://docs.union.ai/serverless/api-reference/flytekit-sdk/flyte-deck#flyte-deck), and [dynamic workflows](https://docs.union.ai/serverless/user-guide/core-concepts/workflows/dynamic-workflows#dynamic-workflows).
 - **[📚 Tutorials](https://docs.union.ai/serverless/tutorials/)**:
-  check out examples of how to put all of Flyte's constructs together to build end-to-end data and ML workflows, like [video dubbing](https://docs.union.ai/serverless/tutorials/multimodal-ai/video-dubbing), [LLM training](https://docs.union.ai/serverless/tutorials/language-models/liger-kernel-finetuning), and [genomic alignment](https://docs.union.ai/serverless/tutorials/bioinformatics/alignment).
+  check out examples of how to put all of Union's constructs together to build end-to-end data and ML workflows, like [video dubbing](https://docs.union.ai/serverless/tutorials/multimodal-ai/video-dubbing), [LLM training](https://docs.union.ai/serverless/tutorials/language-models/liger-kernel-finetuning), and [genomic alignment](https://docs.union.ai/serverless/tutorials/bioinformatics/alignment).
 
 
 ## Write your own workflows

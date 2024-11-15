@@ -1,5 +1,5 @@
+ipykernel
 pandas
-plotly
+pyarrow
 scikit-learn
-matplotlib
 union

@@ -1,22 +1,22 @@
 # Iterate on your Workflows
 
 The training workflow we've been working with so far works, but to
-make it even more useful, we can leverage some more built-in Flyte
+make it even more useful, we can leverage some more built-in Union
 features, which you can see in `iterating.py`.
 
 [📂 Open Python Workflow](command:union-workspace.iterating)
 
 # Structured Datasets
 
-Flyte comes with its own type system, supporting almost all of the
-[built-in Python types](https://docs.flyte.org/projects/cookbook/en/latest/auto/core/type_system/flyte_python_types.html#sphx-glr-auto-core-type-system-flyte-python-types-py),
-but it also exposes a [`StructuredDataset`](https://docs.flyte.org/projects/cookbook/en/latest/auto/core/type_system/structured_dataset.html) type,
+Union inherits Flyte's type system, supporting almost all of the
+[built-in Python types](https://docs.flyte.org/en/latest/user_guide/data_types_and_io/index.html),
+and it also exposes a [`StructuredDataset`](https://docs.union.ai/byoc/api-reference/flytekit-sdk/custom-types/structured-dataset#structureddataset-type) type,
 which we can use to create types for objects like `pandas.DataFrame`s.
 
 ## Caching
 
-Add `cache=True` with a `cache_version` string to the `@task` decorator to [cache](https://docs.flyte.org/projects/cookbook/en/latest/auto/core/flyte_basics/task_cache.html#sphx-glr-auto-core-flyte-basics-task-cache-py) the output of the task. This
-will ensure that you don't re-run the task if you give it the same exact inputs.
+Add `cache=True` with a `cache_version` string to the `@task` decorator to [cache](https://docs.union.ai/byoc/user-guide/core-concepts/caching#caching)
+the output of the task. This will ensure that you don't re-run the task if you give it the same exact inputs.
 
 ## Retries
 

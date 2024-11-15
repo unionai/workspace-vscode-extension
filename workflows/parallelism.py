@@ -2,11 +2,10 @@ from dataclasses import dataclass, asdict
 from functools import partial
 from typing import List
 
+import flytekit as fl
 import pandas as pd
-from sklearn.datasets import load_wine
 from sklearn.linear_model import LogisticRegression
 
-import flytekit as fl
 
 
 image = fl.ImageSpec(
@@ -31,6 +30,8 @@ class Hyperparameters:
 @fl.task(container_image=image)
 def get_data() -> pd.DataFrame:
     """Get the wine dataset."""
+    from sklearn.datasets import load_wine
+
     return load_wine(as_frame=True).frame
 
 

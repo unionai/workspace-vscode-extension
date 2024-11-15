@@ -1,7 +1,7 @@
+import flytekit as fl
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
 
-import flytekit as fl
 
 
 image = fl.ImageSpec(

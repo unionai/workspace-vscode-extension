@@ -53,10 +53,10 @@ const formatTimeDiff = (diffInMills: number): string => {
     });
     const hours = Math.floor((diffInMills / (1000 * 60 * 60)) % 24);
 
-    return `Flyte trial expires in: ${hours}:${minutes}:${seconds}h`;
+    return `Union trial expires in: ${hours}:${minutes}:${seconds}h`;
   }
 
-  return `Flyte trial expired`;
+  return `Union trial expired`;
 }
 
 const substractTiemstamps = (endTime: Date) => {

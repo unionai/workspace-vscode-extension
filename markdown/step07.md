@@ -1,11 +1,11 @@
 # Parallelize your Workflows
 
-Flyte also provides built-in constructs for parallelizing your tasks.
+Union also provides built-in constructs for parallelizing your tasks.
 
 [📂 Open Python workflow](command:union-workspace.parallelizing)
 
 In this example, we're extending our training workflow to implement a simple
-gridsearch workflow leveraging the [`map_task`](https://docs.flyte.org/projects/cookbook/en/latest/auto/core/control_flow/map_task.html#) construct.
+gridsearch workflow leveraging the [`map_task`](https://docs.union.ai/byoc/user-guide/core-concepts/tasks/task-types#map-tasks) construct.
 
 When using `map_task`s, the `@task` function being mapped over can take only
 a single argument. To implement our gridsearch workflow, we update our workflow
@@ -16,7 +16,7 @@ as follows:
    model on a particular hyperparameter configuration.
 2. Implement a task called `prepare_train_args`, which takes in a list of
    dictionaries containing the hyperparameters and the wine dataset itself,
-   returning a list of `TrainArgs` (don't worry, Flyte represents `DataFrame`s
+   returning a list of `TrainArgs` (don't worry, Union represents `DataFrame`s
    and `StructuredDataset`s as pointers to the actual data, so we're not duplicating
    the data 🙃)
 3. Update `training_workflow` so that it takes an `hp_grid: List[dict]` as input,

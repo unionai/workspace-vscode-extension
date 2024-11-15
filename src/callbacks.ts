@@ -25,7 +25,7 @@ const findFile = async (searchPattern: string) => {
   return targetFile;
 }
 
-export const initFlyteWalkthrough = async () => {
+export const initUnionWalkthrough = async () => {
   try {
     const trd = vscode.Uri.parse('trustedDomains:/Trusted Domains');
     await vscode.workspace.fs.stat(trd);
@@ -37,7 +37,7 @@ export const initFlyteWalkthrough = async () => {
   try {
     // Automatically open walkthrough on the first step
     vscode.commands.executeCommand('workbench.action.openWalkthrough', { "category": "unionai.union-workspace#union-workspace", "step": "unionai.union-workspace#union-workspace.start" });
-    // await vscode.commands.executeCommand("walkthroughs.selectStep", `${"union-workspace.convertToFlyte"}`)
+    // await vscode.commands.executeCommand("walkthroughs.selectStep", `${"union-workspace.convertToUnion"}`)
   } catch (error) {
     console.log(error);
   }
@@ -66,12 +66,12 @@ export const OpenPythonWorkflowParallelize = async () => {
   return await openFile("**/parallelism.py");
 }
 
-export const OpenFlyteWorkflow = async () => {
+export const OpenUnionWorkflow = async () => {
   return await openFile("**/union_workflow.py");
 }
 
 export const OpenJupyterNotebook = async () => {
-  return await openNotebookDocument("**/interact_with_a_flyte_cluster.ipynb");
+  return await openNotebookDocument("**/union_on_a_notebook.ipynb");
 }
 
 export const CreateNewWorkflow = async () => {

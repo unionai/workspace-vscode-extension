@@ -5,13 +5,6 @@ Union Workspaces.
 
 ## Development Process
 
-### Debugging extension:
-
-Run the extension by pressing `F5` or by going to the debug side menu.
-From here you can put breakpoints wherever you want:
-
-<img src="./media/startvscode.png">
-
 ### Generating binaries:
 
 Install vsce (one time):
@@ -27,6 +20,19 @@ vsce package --no-yarn
 ```
 
 This will create a `union-workspace-X.Y.Z.vsix` file in the root directory.
+
+
+### Local Debugging
+
+Install the extension on VSCode:
+
+- Press `cmd + shift + p` and selecting `Extensions: Install from VSIX...`
+- Select the `union-workspace-X.Y.Z.vsix` file. This should automatically activate the walkthrough.
+- Before running any commands, press `cmd + shift + p` and select `Python: Select Interpreter`.
+- Choose `+ Create Virtual Environment...` and select either `venv` or `conda`.
+- Open the terminal and run `pip install -r requirements.txt`.
+- You should now be ready to run the commands in the walkthrough.
+
 
 ### Generating a new release
 

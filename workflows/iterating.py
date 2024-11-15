@@ -1,10 +1,10 @@
 from dataclasses import dataclass, asdict
 from typing import Annotated
 
+import flytekit as fl
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
 
-import flytekit as fl
 
 
 image = fl.ImageSpec(

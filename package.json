@@ -11,7 +11,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/unionai/workspace-vscode-extension.git",
-    "directory": "."
+    "directory": "workflows"
   },
   "categories": [
     "Other",
@@ -62,15 +62,15 @@
             ]
           },
           {
-            "id": "union-workspace.convertToFlyte",
+            "id": "union-workspace.convertToUnion",
             "title": "Convert to a Union Workflow",
-            "description": "Let's see how easy it is to port our plain Python workflow to a Union workflow.\n[Open Union workflow](command:union-workspace.openFlyteWorkflow)\n",
+            "description": "Let's see how easy it is to port our plain Python workflow to a Union workflow.\n[Open Union workflow](command:union-workspace.openUnionWorkflow)\n",
             "media": {
               "markdown": "./markdown/step02.md"
             },
             "completionEvents": [
-              "onCommand:union-workspace.convertToFlyte",
-              "onCommand:union-workspace.openFlyteWorkflow"
+              "onCommand:union-workspace.convertToUnion",
+              "onCommand:union-workspace.openUnionWorkflow"
             ]
           },
           {
