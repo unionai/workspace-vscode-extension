@@ -26,11 +26,13 @@ This will create a `union-workspace-X.Y.Z.vsix` file in the root directory.
 
 Install the extension on VSCode:
 
+- Run `make update-workflows` to update the workflows in the `content` submodule.
 - Press `cmd + shift + p` and selecting `Extensions: Install from VSIX...`
 - Select the `union-workspace-X.Y.Z.vsix` file. This should automatically activate the walkthrough.
 - Before running any commands, press `cmd + shift + p` and select `Python: Select Interpreter`.
 - Choose `+ Create Virtual Environment...` and select either `venv` or `conda`. This new environment should be selected as the Python Interpreter.
 - Open the terminal and run `pip install -r requirements.txt`.
+- Make sure that you `cd` into the `content` directory.
 - You should now be ready to run the commands in the walkthrough.
 
 
