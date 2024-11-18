@@ -1,8 +1,9 @@
 export const trustedDomainsContents = `
 [
   "*.union.ai",
+  "*.union.cloud",
   "*.flyte.org",
-  "*.slack.com"
+  "*.slack.com",
 ]
 `;
 
