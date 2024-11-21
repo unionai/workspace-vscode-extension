@@ -97,8 +97,8 @@ export interface OpenTerminalProps {
 
 export function noop() { }
 export const openExternalurl = async () => {
-  vscode.window.showInformationMessage("Union trial expired. You will be redirected back to the homepage.")
-  return vscode.env.openExternal(vscode.Uri.parse('https://sandbox.union.ai/launch?expired=true')).then(noop, noop);
+  vscode.window.showInformationMessage("Union workspace terminated. You will be redirected back to Union Serverless.")
+  return vscode.env.openExternal(vscode.Uri.parse('https://serverless.union.ai')).then(noop, noop);
 }
 
 export const openTerminal = async (props: OpenTerminalProps) => {
