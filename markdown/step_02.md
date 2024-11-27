@@ -13,7 +13,7 @@ from dataclasses import dataclass asdict
 
 @dataclass
 class Hyperparameters:
-    max_iter: int = 50
+    max_iter: int = 100
     hidden_layer_sizes: list[int] = field(default_factory=lambda: [100, 100])
 
 

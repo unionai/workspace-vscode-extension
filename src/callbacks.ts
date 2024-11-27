@@ -81,11 +81,11 @@ export const OpenJupyterNotebook = async () => {
 }
 
 export const RunTrainingWorkflowLocal = async () => {
-  return await openTerminal({ command: "union run workflows/train.py training_workflow" });
+  return await openTerminal({ command: "union run workflows/train.py training_workflow --max_iter 100" });
 }
 
 export const RunTrainingWorkflowRemote = async () => {
-  return await openTerminal({ command: "union run --remote workflows/train.py training_workflow" });
+  return await openTerminal({ command: "union run --remote workflows/train.py training_workflow --max_iter 100" });
 }
 
 export const RunParallelizeWorkflow = async () => {

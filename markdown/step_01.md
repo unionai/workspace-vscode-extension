@@ -61,7 +61,7 @@ Run this workflow locally with the `union run` CLI command:
 [▶️ Run locally in terminal](command:union-workspace.runTrainingLocal)
 
 ```bash
-union run workflows/train.py training_workflow --max_iter 50
+union run workflows/train.py training_workflow --max_iter 100
 ```
 
 Note that you can pass arguments to the workflow as flags.
@@ -72,7 +72,7 @@ Then, to run this on Union Serverless, simply supply the `--remote` flag:
 
 
 ```bash
-union run --remote workflows/train.py training_workflow --max_iter 50
+union run --remote workflows/train.py training_workflow --max_iter 100
 ```
 
 After you run the workflow remotely, you can view the workflow in the Union UI
