@@ -13,8 +13,8 @@ from dataclasses import dataclass asdict
 
 @dataclass
 class Hyperparameters:
-    max_iter: int
-    hidden_layer_sizes: list[int] = field(default_factory=lambda: [100])
+    max_iter: int = 50
+    hidden_layer_sizes: list[int] = field(default_factory=lambda: [100, 100])
 
 
 @union.task(container_image=image)
@@ -43,5 +43,5 @@ Run this workflow by passing a list of hyperparameters to the workflow:
 [▶️ Run locally in terminal](command:union-workspace.runParallelizeWorkflow)
 
 ```bash
-union run --remote workflows/parallelize.py training_workflow --hp_grid '[{"max_iter": 500}, {"max_iter": 750}, {"max_iter": 1000}]'
+union run --remote workflows/parallelize.py training_workflow --hp_grid '[{"max_iter": 25}, {"max_iter": 500}, {"max_iter": 100}]'
 ```
