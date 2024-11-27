@@ -36,8 +36,14 @@ export const initUnionWalkthrough = async () => {
 
   try {
     // Automatically open walkthrough on the first step
-    vscode.commands.executeCommand('workbench.action.openWalkthrough', { "category": "unionai.union-workspace#union-workspace", "step": "unionai.union-workspace#union-workspace.start" });
-    // await vscode.commands.executeCommand("walkthroughs.selectStep", `${"union-workspace.convertToUnion"}`)
+    vscode.commands.executeCommand(
+      'workbench.action.openWalkthrough',
+      {
+        "category": "unionai.union-workspace#union-workspace",
+        "step": "unionai.union-workspace#union-workspace.start"
+      }
+    );
+    vscode.commands.executeCommand("workbench.action.closeSidebar");
   } catch (error) {
     console.log(error);
   }
@@ -71,7 +77,19 @@ export const OpenUnionWorkflow = async () => {
 }
 
 export const OpenJupyterNotebook = async () => {
-  return await openNotebookDocument("**/union_on_a_notebook.ipynb");
+  return await openNotebookDocument("**/iterate.ipynb");
+}
+
+export const RunTrainingWorkflowLocal = async () => {
+  return await openTerminal({ command: "union run workflows/train.py training_workflow" });
+}
+
+export const RunTrainingWorkflowRemote = async () => {
+  return await openTerminal({ command: "union run --remote workflows/train.py training_workflow" });
+}
+
+export const RunParallelizeWorkflow = async () => {
+  return await openTerminal({ command: "union run --remote workflows/parallelize.py training_workflow --hp_grid '[{\"hidden_layer_sizes\": [10]}, {\"hidden_layer_sizes\": [100]}]'" });
 }
 
 export const CreateNewWorkflow = async () => {

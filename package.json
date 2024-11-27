@@ -2,7 +2,7 @@
   "name": "union-workspace",
   "displayName": "Union Workspace Onboarding",
   "description": "Visual Studio Code onboarding experience for Union Workspaces",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "unionai",
   "engines": {
     "vscode": "^1.71.0"
@@ -32,6 +32,7 @@
     "onCommand:union-workspace.start",
     "onCommand:union-workspace.createNewWorkflow",
     "onCommand:union-workspace.openTerminalAndExecute",
+    "onCommand:union-workspace.runParallelizeWorkflow",
     "onCommand:union-workspace.executeCluster",
     "onCommand:union-workspace.inspectResults",
     "onCommand:union-workspace.executeWorkflowLocally",
@@ -40,7 +41,7 @@
   "extensionKind": [
     "workspace"
   ],
-  "icon": "media/union-logo.webp",
+  "icon": "media/logo.webp",
   "contributes": {
     "walkthroughs": [
       {
@@ -50,98 +51,27 @@
         "steps": [
           {
             "id": "union-workspace.start",
-            "title": "Create a Model Training Workflow in Python",
-            "description": "In this first example, we're going to create a simple model training workflow in plain Python.\n[Open Python workflow](command:union-workspace.openPyWorkflow)\n",
-            "media": {
-              "markdown": "./markdown/step01.md"
-            },
-            "completionEvents": [
-              "onCommand:union-workspace.openPyWorkflow",
-              "onCommand:workbench.action.files.openFolder",
-              "onCommand:workbench.action.files.openFileFolder"
-            ]
+            "title": "Step 1: Train a Model",
+            "media": {"markdown": "./markdown/step_01.md"},
+            "completionEvents": ["onStepSelected"]
           },
           {
-            "id": "union-workspace.convertToUnion",
-            "title": "Convert to a Union Workflow",
-            "description": "Let's see how easy it is to port our plain Python workflow to a Union workflow.\n[Open Union workflow](command:union-workspace.openUnionWorkflow)\n",
-            "media": {
-              "markdown": "./markdown/step02.md"
-            },
-            "completionEvents": [
-              "onCommand:union-workspace.convertToUnion",
-              "onCommand:union-workspace.openUnionWorkflow"
-            ]
+            "id": "union-workspace.hyperparameter-optimization",
+            "title": "Step 2: Parallelize Model Training",
+            "media": {"markdown": "./markdown/step_02.md"},
+            "completionEvents": ["onStepSelected"]
           },
           {
-            "id": "union-workspace.executeWorkflowLocally",
-            "title": "Executing your Union Workflows",
-            "description": "Run your workflow using `union`, the CLI that ships with `union`.\n[Run locally in terminal](command:union-workspace.openTerminalAndExecute?%7B%22command%22%3A%20%22union%20run%20workflows%2Funion_workflow.py%20training_workflow%22%7D)\n[Run remotely in terminal](command:union-workspace.openTerminalAndExecute?%7B%22command%22%3A%20%22union%20run%20--remote%20workflows%2Funion_workflow.py%20training_workflow%22%7D)\n",
-            "media": {
-              "markdown": "./markdown/step03.md"
-            },
-            "completionEvents": [
-              "onCommand:union-workspace.executeWorkflowLocally",
-              "onStepSelected"
-            ]
+            "id": "union-workspace.iterating-notebook",
+            "title": "Step 3: Iterate on a Notebook",
+            "media": {"markdown": "./markdown/step_03.md"},
+            "completionEvents": ["onStepSelected"]
           },
           {
-            "id": "union-workspace.inspectResults",
-            "title": "Inspect the Results on Union UI",
-            "description": "Navigate to the URL produced as the result of running `union run`.",
-            "media": {
-              "markdown": "./markdown/step04.md"
-            },
-            "completionEvents": [
-              "onCommand:union-workspace.inspectResults",
-              "onStepSelected"
-            ]
-          },
-          {
-            "id": "union-workspace.jupyter",
-            "title": "Interacting programmatically with Union",
-            "description": "Open the Jupyter Notebook provided in the demo:\n[Open Jupyter Notebook](command:union-workspace.openJupyter)\n",
-            "media": {
-              "markdown": "./markdown/step05.md"
-            },
-            "completionEvents": [
-              "onCommand:union-workspace.jupyter",
-              "onCommand:union-workspace.openJupyter"
-            ]
-          },
-          {
-            "id": "union-workspace.iterating",
-            "title": "Iterating on your Workflows",
-            "description": "Iterate on the workflow to make it more flexible:\n[Open Python workflow](command:union-workspace.iterating)\n",
-            "media": {
-              "markdown": "./markdown/step06.md"
-            },
-            "completionEvents": [
-              "onCommand:union-workspace.iterating"
-            ]
-          },
-          {
-            "id": "union-workspace.parallelizing",
-            "title": "Parallelizing your Workflows",
-            "description": "Parallelize your model training workflow to do gridsearch hyperparameter tuning:\n[Open Python workflow](command:union-workspace.parallelizing)\n",
-            "media": {
-              "markdown": "./markdown/step07.md"
-            },
-            "completionEvents": [
-              "onCommand:union-workspace.parallelizing"
-            ]
-          },
-          {
-            "id": "union-workspace.whatsNext",
-            "title": "What's next",
-            "description": "Explore more resources to help you get started with Union",
-            "media": {
-              "markdown": "./markdown/whats_next.md"
-            },
-            "completionEvents": [
-              "onCommand:union-workspace.whatsNext",
-              "onStepSelected"
-            ]
+            "id": "union-workspace.learn-more",
+            "title": "Step 4: Learn More",
+            "media": {"markdown": "./markdown/step_04.md"},
+            "completionEvents": ["onStepSelected"]
           }
         ]
       }
