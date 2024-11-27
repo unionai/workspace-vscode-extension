@@ -38,7 +38,7 @@ Install the extension on VSCode:
 
 ### Generating a new release
 
-- Add a `git tag -a vX.Y.Z` to the latest commit.
+- Add a `git tag -a vX.Y.Z -m 'Release X.Y.Z'` to the latest commit.
 - Push the tag to the remote: `git push origin --follow-tags`.
 - Go to the repo's new releases page: https://github.com/unionai/workspace-vscode-extension/releases/new.
 - Create a new release with the same name as the tag `vX.Y.Z`.
