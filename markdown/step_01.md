@@ -68,7 +68,7 @@ Note that you can pass arguments to the workflow as flags.
 
 Then, to run this on Union Serverless, simply supply the `--remote` flag:
 
-[▶️ Run locally in terminal](command:union-workspace.runTrainingRemote)
+[▶️ Run remotely in terminal](command:union-workspace.runTrainingRemote)
 
 
 ```bash

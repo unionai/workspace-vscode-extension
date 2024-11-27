@@ -40,7 +40,7 @@ def training_workflow(hp_grid: list[Hyperparameters]) -> list[MLPClassifier]:
 
 Run this workflow by passing a list of hyperparameters to the workflow:
 
-[▶️ Run locally in terminal](command:union-workspace.runParallelizeWorkflow)
+[▶️ Run remotely in terminal](command:union-workspace.runParallelizeWorkflow)
 
 ```bash
 union run --remote workflows/parallelize.py training_workflow --hp_grid '[{"max_iter": 25}, {"max_iter": 500}, {"max_iter": 100}]'
