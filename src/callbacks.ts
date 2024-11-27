@@ -89,7 +89,7 @@ export const RunTrainingWorkflowRemote = async () => {
 }
 
 export const RunParallelizeWorkflow = async () => {
-  return await openTerminal({ command: "union run --remote workflows/parallelize.py training_workflow --hp_grid '[{\"hidden_layer_sizes\": [10]}, {\"hidden_layer_sizes\": [100]}]'" });
+  return await openTerminal({ command: "union run --remote workflows/parallelize.py training_workflow --hp_grid '[{\"max_iter\": 500}, {\"max_iter\": 750}, {\"max_iter\": 1000}]'" });
 }
 
 export const CreateNewWorkflow = async () => {

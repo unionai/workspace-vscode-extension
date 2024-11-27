@@ -16,8 +16,8 @@ You've successfully run your first Union workflows:
 
 ## Next steps
 
-Use the notebook environment to explore Union further To experience its
-full power, check out the following guides:
+Use the notebook environment to experience the full power of Union by checking
+out the following guides:
 
 - 💰 [Reduce compute cost](https://docs.union.ai/serverless/user-guide/core-concepts/caching) by caching workflow outputs.
 - 🤫 [Define secrets](https://docs.union.ai/serverless/user-guide/development-cycle/managing-secrets) to keep your data and ML pipelines secure.
