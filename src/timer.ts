@@ -6,15 +6,23 @@ let timer: NodeJS.Timer;
 
 export const startTimer = () => {
   const envTimestamp = process.env.SANDBOX_EXPIRED_TIMESTAMP;
-  const endTime = envTimestamp ? new Date(+envTimestamp) : addMinutes(4 * 60 + 15);
+  let aliveDuration = 4 * 60 + 15;
+  if (process.env.WORKSPACE_TTL_SECONDS) {
+    aliveDuration = Math.floor(Number(process.env.WORKSPACE_TTL_SECONDS) / 60);
+  }
+  const endTime = envTimestamp ? new Date(+envTimestamp) : addMinutes(aliveDuration);
+
   if (!statusBar) {
     statusBar = vscode.window.createStatusBarItem("union", vscode.StatusBarAlignment.Right, 0);
     statusBar.name = "union";
     statusBar.show();
   }
 
+  // note: this needs to read from the heartbeat path
+  // $HOME/.local/share/code-server/heartbeat to refresh the timer
   const refreshTimer = async () => {
-    const diffInMills = substractTiemstamps(endTime);
+
+    const diffInMills = substractTimestamps(endTime);
     const diffText = formatTimeDiff(diffInMills);
     statusBar.text = diffText;
 
@@ -53,13 +61,13 @@ const formatTimeDiff = (diffInMills: number): string => {
     });
     const hours = Math.floor((diffInMills / (1000 * 60 * 60)) % 24);
 
-    return `Union trial expires in: ${hours}:${minutes}:${seconds}h`;
+    return `Union workspace will terminate in: ${hours}:${minutes}:${seconds}h`;
   }
 
-  return `Union trial expired`;
+  return `Union workspace expired`;
 }
 
-const substractTiemstamps = (endTime: Date) => {
+const substractTimestamps = (endTime: Date) => {
   const now = new Date();
   const diffTime = endTime.getTime() - now.getTime();
 

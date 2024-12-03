@@ -46,7 +46,8 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(vscode.commands.registerCommand(Commands.RunTrainingRemote, RunTrainingWorkflowRemote));
   context.subscriptions.push(vscode.commands.registerCommand(Commands.RunParallelize, RunParallelizeWorkflow));
   context.subscriptions.push(vscode.commands.registerCommand(Commands.CreateNewWorkflow, CreateNewWorkflow));
-  context.subscriptions.push(startTimer());
+  // remove timer since this doesn't reset the timer when user performs an new action
+  // context.subscriptions.push(startTimer());
   return context;
 }
 
