@@ -1,6 +1,6 @@
-.PHONY: update-workflows
-update-workflows:
-	git submodule update --remote workflows
+.PHONY: update-content
+update-content:
+	git submodule update --remote content
 
 
 .PHONY: clean
