@@ -11,6 +11,7 @@ import {
   RunTrainingWorkflowLocal,
   RunTrainingWorkflowRemote,
   RunParallelizeWorkflow,
+  RunLogin,
 } from './callbacks';
 
 import { disposeStatusBar, startTimer } from './timer';
@@ -27,6 +28,7 @@ export const enum Commands {
   "Parallelize" = 'union-workspace.parallelizing',
   "Iterate" = 'union-workspace.iterating',
   "CreateNewWorkflow" = 'union-workspace.createNewWorkflow',
+  "RunLogin" = 'union-workspace.runLogin',
   "RunTrainingLocal" = 'union-workspace.runTrainingLocal',
   "RunTrainingRemote" = 'union-workspace.runTrainingRemote',
   "RunParallelize" = 'union-workspace.runParallelizeWorkflow',
@@ -42,6 +44,7 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(vscode.commands.registerCommand(Commands.NewJupyter, OpenJupyterNotebook));
   context.subscriptions.push(vscode.commands.registerCommand(Commands.OpenTerminal, OpenTerminal));
   context.subscriptions.push(vscode.commands.registerCommand(Commands.Parallelize, OpenPythonWorkflowParallelize));
+  context.subscriptions.push(vscode.commands.registerCommand(Commands.RunLogin, RunLogin));
   context.subscriptions.push(vscode.commands.registerCommand(Commands.RunTrainingLocal, RunTrainingWorkflowLocal));
   context.subscriptions.push(vscode.commands.registerCommand(Commands.RunTrainingRemote, RunTrainingWorkflowRemote));
   context.subscriptions.push(vscode.commands.registerCommand(Commands.RunParallelize, RunParallelizeWorkflow));

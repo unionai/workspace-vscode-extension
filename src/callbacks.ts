@@ -80,6 +80,10 @@ export const OpenJupyterNotebook = async () => {
   return await openNotebookDocument("**/iterate.ipynb");
 }
 
+export const RunLogin = async () => {
+  return await openTerminal({ command: "union create login --auth device-flow --serverless" });
+}
+
 export const RunTrainingWorkflowLocal = async () => {
   return await openTerminal({ command: "union run workflows/train.py training_workflow --max_iter 100" });
 }
@@ -129,7 +133,10 @@ export const openTerminal = async (props: OpenTerminalProps) => {
       cwd: dirPath,
     });
   }
+  // Add a small delay to ensure terminal is ready
+  await new Promise(resolve => setTimeout(resolve, 150));
+
   const command = props?.command || "";
   terminal.show(false);
-  terminal.sendText(command, false)
+  terminal.sendText(command, true)
 }

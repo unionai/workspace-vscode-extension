@@ -2,7 +2,7 @@
   "name": "union-workspace",
   "displayName": "Union Workspace Onboarding",
   "description": "Visual Studio Code onboarding experience for Union Workspaces",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "publisher": "unionai",
   "engines": {
     "vscode": "^1.71.0"
@@ -51,6 +51,12 @@
         "steps": [
           {
             "id": "union-workspace.start",
+            "title": "Login",
+            "media": {"markdown": "./markdown/step_00.md"},
+            "completionEvents": ["onStepSelected"]
+          },
+          {
+            "id": "union-workspace.train-model",
             "title": "Step 1: Train a Model",
             "media": {"markdown": "./markdown/step_01.md"},
             "completionEvents": ["onStepSelected"]
@@ -69,7 +75,7 @@
           },
           {
             "id": "union-workspace.learn-more",
-            "title": "Step 4: Learn More",
+            "title": "Learn More",
             "media": {"markdown": "./markdown/step_04.md"},
             "completionEvents": ["onStepSelected"]
           }
