@@ -133,6 +133,9 @@ export const openTerminal = async (props: OpenTerminalProps) => {
       cwd: dirPath,
     });
   }
+  // Add a small delay to ensure terminal is ready
+  await new Promise(resolve => setTimeout(resolve, 150));
+
   const command = props?.command || "";
   terminal.show(false);
   terminal.sendText(command, true)
