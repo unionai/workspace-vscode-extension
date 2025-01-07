@@ -18,7 +18,7 @@ dependencies for our workflow. You can think of this as a high-level interface
 to define a container image:
 
 ```python
-image = fl.ImageSpec(packages=["pandas", "pyarrow", "scikit-learn"])
+image = union.ImageSpec(packages=["pandas", "pyarrow", "scikit-learn"])
 ```
 
 Then, we define the `get_data` and `train_model` tasks and compose them
@@ -56,19 +56,19 @@ def training_workflow(
 ```
 
 Union supports seamless development from local to remote execution.
-Run this workflow locally with the `union run` CLI command:
+Run this workflow on the Workspace machine itself with the `union run` CLI command:
 
-[▶️ Run locally in terminal](command:union-workspace.runTrainingLocal)
+[▶️ Run locally in the Workspace](command:union-workspace.runTrainingLocal)
 
 ```bash
 union run workflows/train.py training_workflow --max_iter 100
 ```
 
-Note that you can pass arguments to the workflow as flags.
+This is useful for quickly debugging your workflow in the local environment.
 
-Then, to run this on Union Serverless, simply supply the `--remote` flag:
+To run this on Union Serverless, simply supply the `--remote` flag:
 
-[▶️ Run remotely in terminal](command:union-workspace.runTrainingRemote)
+[▶️ Run remotely on the Union cluster](command:union-workspace.runTrainingRemote)
 
 
 ```bash

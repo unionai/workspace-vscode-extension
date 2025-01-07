@@ -2,7 +2,7 @@
   "name": "union-workspace",
   "displayName": "Union Workspace Onboarding",
   "description": "Visual Studio Code onboarding experience for Union Workspaces",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "publisher": "unionai",
   "engines": {
     "vscode": "^1.71.0"
