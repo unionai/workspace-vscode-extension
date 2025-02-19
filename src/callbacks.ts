@@ -81,7 +81,7 @@ export const OpenJupyterNotebook = async () => {
 }
 
 export const RunLogin = async () => {
-  const host = process.env.UNION_SERVERLESS_ENDPOINT;
+  const host = process.env._UNION_ENDPOINT;
   return await openTerminal({ command: `union create login --auth device-flow --host ${host}` });
 }
 
