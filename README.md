@@ -26,7 +26,7 @@ This will create a `union-workspace-X.Y.Z.vsix` file in the root directory.
 
 Install the extension on VSCode:
 
-- Run `make update-workflows` to update the workflows in the `content` submodule.
+- Run `make update-content` to update the workflows in the `content` submodule.
 - Press `cmd + shift + p` and selecting `Extensions: Install from VSIX...`
 - Select the `union-workspace-X.Y.Z.vsix` file. This should automatically activate the walkthrough.
 - Before running any commands, press `cmd + shift + p` and select `Python: Select Interpreter`.
