@@ -2,7 +2,7 @@
   "name": "union-workspace",
   "displayName": "Union Workspace Onboarding",
   "description": "Visual Studio Code onboarding experience for Union Workspaces",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "publisher": "unionai",
   "engines": {
     "vscode": "^1.71.0"
@@ -47,7 +47,7 @@
       {
         "id": "union-workspace",
         "title": "Getting Started with Union",
-        "description": "This quick start gives an overview of how to get up and running with Union",
+        "description": "This quick start gives an overview of how to get up and running with Union.",
         "steps": [
           {
             "id": "union-workspace.start",

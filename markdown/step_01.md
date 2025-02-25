@@ -18,7 +18,7 @@ dependencies for our workflow. You can think of this as a high-level interface
 to define a container image:
 
 ```python
-image = union.ImageSpec(packages=["pandas", "pyarrow", "scikit-learn"])
+image = union.ImageSpec(packages=["pandas", "pyarrow", "scikit-learn"], builder="union")
 ```
 
 Then, we define the `get_data` and `train_model` tasks and compose them
