@@ -4,7 +4,8 @@ export const trustedDomainsContents = `
   "*.flyte.org",
   "*.slack.com",
   "signin-serverless.hosted.unionai.cloud",
-  "*.unionai.cloud"
+  "*.unionai.cloud",
+  "*.github.com",
 ]
 `;
 

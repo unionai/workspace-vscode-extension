@@ -31,14 +31,7 @@ This repository contains `user_guide` and `tutorials` subfolders that correspond
 to the [User Guide](https://docs.union.ai/serverless/user-guide/) and
 [Tutorial](https://docs.union.ai/serverless/tutorials/) documentation, respectively.
 
-For instance, to run the `user_guide` example [here](https://github.com/unionai/unionai-examples/blob/main/user_guide/first_workflow/ml_workflow/ml_workflow.py),
-run the following command:
-
-```
-union run --remote user_guide/first_workflow/ml_workflow/ml_workflow.py main --max_bins 64
-```
-
-And to run the `tutorials` examples, simply run the instructions in the **Run on Union BYOC** dropdown.
+For instance, to run the `tutorials` examples, simply run the instructions in the **Run on Union BYOC** dropdown.
 For example, to train a [credit default model with XGBoost](https://docs.union.ai/byoc/tutorials/finance/credit-default-xgboost),
 run the following command:
 
